@@ -19,10 +19,10 @@ const Navbar = () => {
   return (
     <nav className="flex">
       <div className="nav-burger button" onClick={openModal}>
-        <img src={`${process.env.PUBLIC_URL}/assets/images/icon-hamburger.svg`} />
+        <img src={`${process.env.PUBLIC_URL}/assets/images/icon-hamburger.svg`} alt="hamburger" />
       </div>
       <div className="nav-brand">
-        <h1><img src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`} /></h1>
+        <img src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`} alt="logo" />
       </div>
       <div className="nav-link">
         <ul className="link">
@@ -35,7 +35,7 @@ const Navbar = () => {
       {modal && (
         <div className="nav-modal">
           <div className="modal-box">
-            <span className="button" onClick={closeModal}><img src={`${process.env.PUBLIC_URL}/assets/images/icon-close.svg`} /></span>
+            <span className="button" onClick={closeModal}><img src={`${process.env.PUBLIC_URL}/assets/images/icon-close.svg`} alt="close" /></span>
             <ul className="link">
               <li><a href="/">home</a></li>
               <li><a href="#">shop</a></li>

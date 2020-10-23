@@ -64,11 +64,11 @@ const RoomComponent = () => {
       {
         content && (
           <div className="cover">
-            { isMobile && (<img src={`${process.env.PUBLIC_URL}/assets/${content[contentIndex].img.mobile}`} />)}
-            { !isMobile && (<img src={`${process.env.PUBLIC_URL}/assets/${content[contentIndex].img.desktop}`} />)}
+            { isMobile && (<img src={`${process.env.PUBLIC_URL}/assets/${content[contentIndex].img.mobile}`} alt="cover-desktop" />)}
+            { !isMobile && (<img src={`${process.env.PUBLIC_URL}/assets/${content[contentIndex].img.desktop}`} alt="cover-mobile" />)}
             <div className="slide">
-              <span className='button' onClick={prevContent}><img src={`${process.env.PUBLIC_URL}/assets/images/icon-angle-left.svg`} /></span>
-              <span className='button' onClick={nextContent}><img src={`${process.env.PUBLIC_URL}/assets/images/icon-angle-right.svg`} /></span>
+              <span className='button' onClick={prevContent}><img src={`${process.env.PUBLIC_URL}/assets/images/icon-angle-left.svg`} alt="prev-slide" /></span>
+              <span className='button' onClick={nextContent}><img src={`${process.env.PUBLIC_URL}/assets/images/icon-angle-right.svg`} alt="next-slide" /></span>
             </div>
           </div>
         )
@@ -78,12 +78,12 @@ const RoomComponent = () => {
           <div id="shop" className="content">
             <h1>{content[contentIndex].topic}</h1>
             <p>{content[contentIndex].desc}</p>
-            <a className='text-space-5' href="#">SHOW NOW <img src={`${process.env.PUBLIC_URL}/assets/images/icon-arrow.svg`}/></a>
+            <a className='text-space-5' href="#">SHOW NOW <img src={`${process.env.PUBLIC_URL}/assets/images/icon-arrow.svg`} alt="arrow" /></a>
           </div>
         )
       }
       <div class="image">
-        <img src={`${process.env.PUBLIC_URL}/assets/images/image-about-dark.jpg`} />
+        <img src={`${process.env.PUBLIC_URL}/assets/images/image-about-dark.jpg`} alt="furniture-dark" />
       </div>
       <div id='about' className="content">
         <h4 className='text-space-25 uppercase'>About our furniture</h4>
@@ -95,7 +95,7 @@ const RoomComponent = () => {
         </p>
       </div>
       <div class="image">
-        <img src={`${process.env.PUBLIC_URL}/assets/images/image-about-light.jpg`} />
+        <img src={`${process.env.PUBLIC_URL}/assets/images/image-about-light.jpg`} alt="furniture-light"  />
       </div>
     </div>);
 }
