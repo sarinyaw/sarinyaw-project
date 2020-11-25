@@ -142,10 +142,10 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.icons}>
-          <a href="/" target="_blank"><i className="fa fa-facebook-official" aria-hidden="true"></i></a>
-          <a href="/" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="/" target="_blank"><i className="fa fa-pinterest" aria-hidden="true"></i></a>
-          <a href="/" target="_blank"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="/" target="_blank"><i className="fa fa-facebook-official"></i></a>
+          <a href="/" target="_blank"><i className="fa fa-twitter"></i></a>
+          <a href="/" target="_blank"><i className="fa fa-pinterest"></i></a>
+          <a href="/" target="_blank"><i className="fa fa-instagram"></i></a>
         </div>
       </footer>
 
