@@ -118,34 +118,34 @@ export default function Home() {
           <div>
             <p>Features</p>
             <ul className={styles.links}>
-              <li><a href="" target="_blank">Link Shortening</a></li>
-              <li><a href="" target="_blank">Branded Links</a></li>
-              <li><a href="" target="_blank">Analytics</a></li>
+              <li><a href="/" target="_blank">Link Shortening</a></li>
+              <li><a href="/" target="_blank">Branded Links</a></li>
+              <li><a href="/" target="_blank">Analytics</a></li>
             </ul>
           </div>
           <div>
             <p>Resources</p>
             <ul className={styles.links}>
-              <li><a href="" target="_blank">Blog</a></li>
-              <li><a href="" target="_blank">Developers</a></li>
-              <li><a href="" target="_blank">Support</a></li>
+              <li><a href="/" target="_blank">Blog</a></li>
+              <li><a href="/" target="_blank">Developers</a></li>
+              <li><a href="/" target="_blank">Support</a></li>
             </ul>
           </div>
           <div>
             <p>Company</p>
             <ul className={styles.links}>
-              <li><a href="" target="_blank">About</a></li>
-              <li><a href="" target="_blank">Our Team</a></li>
-              <li><a href="" target="_blank">Careers</a></li>
-              <li><a href="" target="_blank">Contact</a></li>
+              <li><a href="/" target="_blank">About</a></li>
+              <li><a href="/" target="_blank">Our Team</a></li>
+              <li><a href="/" target="_blank">Careers</a></li>
+              <li><a href="/" target="_blank">Contact</a></li>
             </ul>
           </div>
         </div>
         <div className={styles.icons}>
-          <a href="" target="_blank"><i className="fa fa-facebook-official" aria-hidden="true"></i></a>
-          <a href="" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="" target="_blank"><i className="fa fa-pinterest" aria-hidden="true"></i></a>
-          <a href="" target="_blank"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="/" target="_blank"><i className="fa fa-facebook-official" aria-hidden="true"></i></a>
+          <a href="/" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="/" target="_blank"><i className="fa fa-pinterest" aria-hidden="true"></i></a>
+          <a href="/" target="_blank"><i className="fa fa-instagram" aria-hidden="true"></i></a>
         </div>
       </footer>
 
