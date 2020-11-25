@@ -1,0 +1,146 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  color: #060606;
+  padding: 20px 0;
+  .navbarStart,
+  .navbarEnd {
+    padding: 0 20px;
+  }
+  .navbarStart {
+    display: flex;
+    align-items: center;
+  }
+  .navbarEnd {
+    display: flex;
+    align-items: center;
+  }
+  .navbarLink {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #3b3054;
+    color: white;
+    border-radius: 10px;
+    margin: auto;
+    position: fixed;
+    width: 90%;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 70px;
+    hr {
+      width: 100%;
+      border: 0;
+      height: 1px;
+      background-color: #564f67;
+    }
+    a {
+      text-transform: capitalize;
+      text-align: center;
+      line-height: 3;
+      font-size: 18px;
+      &:hover {
+        color: #2acfcf;
+      }
+    }
+    .button {
+      background-color: #2acfcf;
+      border-radius: 40px;
+      &:hover {
+        background-color: #9be3e2;
+        color: #fff;
+      }
+    }
+  }
+  .navbarStart,
+  .navbarEnd {
+    a {
+      text-transform: capitalize;
+      text-align: center;
+      line-height: 3;
+      font-size: 18px;
+      color: hsl(0, 0%, 75%);
+      margin-left: 30px;
+      &:hover {
+        color: #000;
+      }
+    }
+    .button {
+      background-color: #2acfcf;
+      border-radius: 40px;
+      color: #fff;
+      padding: 10px 20px;
+      line-height: 1.5;
+      &:hover {
+        background-color: #9be3e2;
+        color: #fff;
+      }
+    }
+  }
+  .hamburger {
+    cursor: pointer;
+  }
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1,
+  h2,
+  h3 {
+    color: hsl(255, 11%, 22%);
+    margin: 0;
+  }
+  h4 {
+    color: white;
+  }
+  p {
+    color: hsl(0, 0%, 70%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    width: 100%;
+    margin: auto;
+  }
+  .navbarStart,
+  .navbarEnd {
+    a {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .navbar {
+    width: 90%;
+    margin: auto;
+    .navbarStart,
+    .navbarEnd {
+      padding: 0;
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .navbar {
+    max-width: 1200px;
+    margin: auto;
+    .navbarStart,
+    .navbarEnd {
+      padding: 0;
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+}
