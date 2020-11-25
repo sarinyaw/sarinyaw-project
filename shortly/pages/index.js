@@ -43,7 +43,7 @@ export default function Home() {
           </div>
         </section>
         <form className={formClass} onSubmit={handleSubmit(getShortLink)}>
-          <input type="text" name="link" placeholder="Shorten a link here..." ref={register({ required: true })} />
+          <input type="text" name="link" placeholder="Shorten a link here..." ref={register({ required: true })} aria-label="UrlForShorten" />
           {errors.link && <span className={styles.errorsMessage}>Please add a link</span>}
           <button type="submit">Shorten It!</button>
         </form>
