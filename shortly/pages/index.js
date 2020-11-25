@@ -115,23 +115,23 @@ export default function Home() {
       <footer className={styles.footer}>
         <p className={styles.topic}>Shortly</p>
         <div className={styles.linkWrapper}>
-          <span>
+          <div>
             <p>Features</p>
             <ul className={styles.links}>
               <li><a href="" target="_blank">Link Shortening</a></li>
               <li><a href="" target="_blank">Branded Links</a></li>
               <li><a href="" target="_blank">Analytics</a></li>
             </ul>
-          </span>
-          <span>
+          </div>
+          <div>
             <p>Resources</p>
             <ul className={styles.links}>
               <li><a href="" target="_blank">Blog</a></li>
               <li><a href="" target="_blank">Developers</a></li>
               <li><a href="" target="_blank">Support</a></li>
             </ul>
-          </span>
-          <span>
+          </div>
+          <div>
             <p>Company</p>
             <ul className={styles.links}>
               <li><a href="" target="_blank">About</a></li>
@@ -139,7 +139,7 @@ export default function Home() {
               <li><a href="" target="_blank">Careers</a></li>
               <li><a href="" target="_blank">Contact</a></li>
             </ul>
-          </span>
+          </div>
         </div>
         <div className={styles.icons}>
           <a href="" target="_blank"><i className="fa fa-facebook-official" aria-hidden="true"></i></a>
