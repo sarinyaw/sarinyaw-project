@@ -1,0 +1,491 @@
+.scoreBoard {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  display: flex;
+  border: 3px solid #606e85;
+  border-radius: 10px;
+  justify-content: space-between;
+  z-index: 3;
+  * {
+    transition: all 0.5s;
+  }
+  .logo {
+    width: 90px;
+    object-fit: contain;
+    margin-left: 10px;
+  }
+  .scoreBox {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 10px 20px 5px 20px;
+    border-radius: 4px;
+  }
+  .scoreLabel,
+  .scoreCount {
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+  }
+  .scoreLabel {
+    text-transform: uppercase;
+    color: #2a46c0;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+  .scoreCount {
+    color: hsl(229, 25%, 31%);
+    font-size: 42px;
+  }
+}
+
+.gameBoard {
+  background-image: url(/images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  margin: auto 0;
+  display: grid;
+  padding-top: 20px;
+  grid-gap: 20px;
+  grid-template-areas:
+    "paper scissors"
+    "rock rock";
+  justify-content: space-evenly;
+  justify-items: center;
+  background-position-x: center;
+  transition: all 0.5s;
+
+  .paper,
+  .scissors,
+  .rock {
+    img {
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+  }
+}
+
+.gameResult {
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: 20px;
+  margin: auto;
+  display: grid;
+  justify-content: space-evenly;
+  justify-items: center;
+  background-position-x: center;
+  transition: all 0.5s;
+  .youPick {
+    grid-area: you-pick;
+    position: relative;
+    z-index: 2;
+  }
+  .resultDone {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background-image: repeating-radial-gradient(
+      #293451,
+      #293451 20%,
+      #364369 15%,
+      #364369 30%
+    );
+  }
+  .housePick {
+    grid-area: house-pick;
+    z-index: 2;
+  }
+  .blankPick {
+    background-color: #0d1d35;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .result {
+    grid-area: game-result;
+    justify-content: space-around;
+    align-content: center;
+    display: grid;
+    width: 260px;
+    height: 165px;
+    z-index: 2;
+    * {
+      margin: 10px auto;
+    }
+  }
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 60px;
+    z-index: 2;
+  }
+  p {
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  span {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.paper,
+.scissors,
+.rock {
+  z-index: 2;
+  padding: 11.5px 13px;
+  width: max-content;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.paper {
+  grid-area: paper;
+  background: linear-gradient(hsl(230, 89%, 65%), hsl(230, 89%, 62%));
+  img {
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 50%;
+  }
+}
+.scissors {
+  grid-area: scissors;
+  background: linear-gradient(hsl(40, 84%, 53%), hsl(39, 89%, 49%));
+  img {
+    background-color: white;
+    padding: 20.5px 24px;
+    border-radius: 50%;
+  }
+}
+.rock {
+  grid-area: rock;
+  background: linear-gradient(hsl(349, 70%, 56%), hsl(349, 71%, 52%));
+  img {
+    background-color: white;
+    padding: 25.5px;
+    border-radius: 50%;
+  }
+}
+
+.rulesButton {
+  cursor: pointer;
+  transition: all 0.5s;
+  font-family: "Barlow Semi Condensed";
+  color: #fff;
+  letter-spacing: 3px;
+  font-size: 16px;
+  border: 2px solid #606e85;
+  background: transparent;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  &:hover {
+    border: 2px solid #fff;
+  }
+  &:focus {
+    border: 2px solid #fff;
+    outline: 0;
+  }
+}
+
+.playAgainButton {
+  cursor: pointer;
+  transition: all 0.5s;
+  font-family: "Barlow Semi Condensed";
+  color: hsl(229, 25%, 31%);
+  letter-spacing: 3px;
+  font-size: 16px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 15px 60px;
+  text-transform: uppercase;
+  width: max-content;
+  margin: auto;
+  &:hover {
+    color: hsl(349, 71%, 52%);
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+.rulesModal {
+  background-color: white;
+  display: grid;
+  position: absolute;
+  transition: all 0.5s;
+  z-index: 4;
+  img {
+    width: 100%;
+    object-fit: contain;
+    margin: auto;
+  }
+  .rulesImage {
+    grid-area: rules;
+  }
+  .closeButton {
+    width: 20px;
+    grid-area: close;
+    cursor: pointer;
+  }
+  h1 {
+    grid-area: topic;
+    text-transform: uppercase;
+    color: hsl(229, 25%, 31%);
+  }
+}
+@media screen and (min-width: 1025px) {
+  .rules {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .rulesModal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    grid-template-areas:
+      "topic close"
+      "rules rules";
+    .rulesImage {
+      max-width: 480px;
+      margin: 2rem auto 1rem auto;
+    }
+    h1 {
+      text-align: left;
+      margin: 10px 0;
+    }
+    .closeButton {
+      margin-right: 0;
+    }
+  }
+
+  .gameResult {
+    grid-template-areas: "you-pick game-result house-pick";
+    align-items: center;
+    span {
+      width: 300px;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .resultDone {
+    transform: translate(-50%, calc(-50% + 25.5px));
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .rules {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rulesModal {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 5rem 2.5rem;
+    grid-template-areas:
+      "topic"
+      "rules"
+      "close";
+    .rulesImage {
+      max-width: 480px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+  .gameResult {
+    grid-template-areas:
+      "you-pick house-pick"
+      "game-result game-result";
+    .blankPick {
+      width: 280px;
+      height: 283px;
+    }
+    span {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .resultDone {
+    transform: translate(-50%, calc(-50% - 25.5px));
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .scoreBoard {
+    padding: 20px;
+    .logo {
+      width: 160px;
+      margin-left: 10px;
+    }
+    .scoreBox {
+      padding: 10px 40px 5px 40px;
+    }
+    .scoreLabel {
+      font-size: 14px;
+    }
+    .scoreCount {
+      font-size: 60px;
+    }
+  }
+  .gameBoard {
+    max-width: 600px;
+    .paper,
+    .scissors,
+    .rock {
+      img {
+        width: 150px;
+        height: 150px;
+        padding: 35px;
+      }
+      padding: 20px;
+    }
+  }
+  .gameResult {
+    .paper,
+    .scissors,
+    .rock {
+      img {
+        width: 220px;
+        height: 220px;
+        padding: 50px;
+      }
+      padding: 30px;
+    }
+    .blankPick {
+      width: 280px;
+      height: 283px;
+    }
+  }
+  .gameBoard,
+  .gameResult {
+    background-position-y: 80px;
+    background-size: 60%;
+    .paper,
+    .scissors,
+    .rock {
+      img {
+        object-fit: contain;
+        box-shadow: inset 0px 7px 1px 0px #d9dde8;
+      }
+    }
+  }
+  .paper {
+    box-shadow: inset 0px -7px 1px 0px hsl(229, 65%, 46%);
+  }
+  .scissors {
+    box-shadow: inset 0px -7px 1px 0px hsl(28, 78, 44);
+  }
+  .rock {
+    box-shadow: inset 0px -7px 1px 0px hsl(345, 73, 35);
+  }
+}
+@media screen and (max-width: 768px) {
+  .paper,
+  .scissors,
+  .rock {
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      padding: 25px;
+      box-shadow: inset 0px 5px 1px 0px #d9dde8;
+    }
+    padding: 15px;
+  }
+  .resultDone {
+    transform: translate(-50%, calc(-50% - 25.5px));
+  }
+  .paper {
+    box-shadow: inset 0px -5px 1px 0px hsl(229, 65%, 46%);
+  }
+  .scissors {
+    box-shadow: inset 0px -5px 1px 0px hsl(28, 78, 44);
+  }
+  .rock {
+    box-shadow: inset 0px -5px 1px 0px hsl(345, 73, 35);
+  }
+  .gameResult {
+    span {
+      width: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .scoreBoard {
+    padding: 15px;
+    .logo {
+      width: 120px;
+    }
+    .scoreBox {
+      padding: 10px 30px 5px 30px;
+    }
+  }
+  .gameBoard,
+  .gameResult {
+    background-position-y: 55px;
+    background-size: 55%;
+    max-width: 500px;
+  }
+  .gameResult {
+    .paper,
+    .scissors,
+    .rock {
+      img {
+        width: 120px;
+        height: 120px;
+        padding: 35px;
+      }
+      padding: 20px;
+    }
+    .blankPick {
+      width: 160px;
+      height: 163px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scoreBoard {
+    padding: 10px;
+    .logo {
+      width: 90px;
+    }
+  }
+  .gameBoard,
+  .gameResult {
+    background-position-y: 70px;
+    background-size: 250px;
+    max-width: 480px;
+    .blankPick {
+      width: 130px;
+      height: 133px;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .gameResult {
+    justify-content: space-between;
+    align-self: baseline;
+    span {
+      align-self: baseline;
+    }
+  }
+}
