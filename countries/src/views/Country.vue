@@ -11,18 +11,18 @@
       </div>
       <div class="info">
         <h1>{{ $route.params.country }}</h1>
-        <div>
+        <ul>
           <li><b>Native Name:</b> {{ country.nativeName }}</li>
           <li><b>Population:</b> {{ country.population }}</li>
           <li><b>Region:</b> {{ country.region }}</li>
           <li><b>Sub Region:</b> {{ country.subregion }}</li>
           <li><b>Capital:</b> {{ country.capital }}</li>
-        </div>
-        <div>
+        </ul>
+        <ul>
           <li><b>Top Level Domain:</b> {{ country.topLevelDomain }}</li>
           <li><b>Currencies:</b> {{ country.currencies }}</li>
           <li><b>Languages:</b> {{ country.languages }}</li>
-        </div>
+        </ul>
       </div>
       <div class="borderland">
         <h2>Border Countries:</h2>
@@ -140,8 +140,11 @@ export default {
   grid-area: info;
   display: flex;
   flex-wrap: wrap;
-  div {
+  div, ul {
     margin-top: 30px;
+  }
+  ul {
+    padding: 0;
   }
   h1 {
     width: 100%;
@@ -208,7 +211,7 @@ export default {
     }
   }
   .info {
-    div {
+    div, ul {
       width: 50%;
       margin: 0;
     }
@@ -240,7 +243,7 @@ export default {
     }
   }
   .info {
-    div {
+    div, ul {
       width: 50%;
     }
   }
@@ -265,6 +268,11 @@ export default {
     }
     div {
       max-width: 460px;
+    }
+  }
+  .info {
+    div, ul {
+      width: 100%;
     }
   }
 }
