@@ -1,0 +1,16 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+button {
+  border: 0;
+  outline: none;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+}
