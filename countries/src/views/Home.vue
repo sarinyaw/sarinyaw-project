@@ -10,7 +10,8 @@
     </div>
     <div class="filter-field">
       <span class="filter-button border" @click="openFilter()">
-        <p>Filter By Region</p>
+        <p v-if="selected">{{ selected }}</p>
+        <p v-else>Filter By Region</p>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </span>
       <ul class="filter-option border" v-if="isOpenFilter">
@@ -27,7 +28,7 @@
     <div class="countries">
       <div class="card" v-for="(value, index) in resultCountry" :key="index">
         <router-link v-bind:to="value.name">
-          <img :src="value.flag" width="300" />
+          <img :src="value.flag" width="300" :alt="value.name" />
           <div>
             <h1>{{ value.name }}</h1>
             <li>
@@ -101,6 +102,7 @@ export default {
       }
       this.resultCountry = this.filterCountry
       this.changeCountry()
+      this.isOpenFilter = !this.isOpenFilter
     }
   }
 }
