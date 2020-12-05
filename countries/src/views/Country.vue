@@ -7,7 +7,7 @@
     </span>
     <div class="detail" v-if="country">
       <div class="flag">
-        <img :src="country.flag" width="300" />
+        <img :src="country.flag" width="300" :alt="country.name" />
       </div>
       <div class="info">
         <h1>{{ $route.params.country }}</h1>
