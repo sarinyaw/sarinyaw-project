@@ -33,12 +33,19 @@
   .inputTodo,
   .todoList {
     background-color: hsl(235, 24%, 19%);
-    input {
-      color: hsl(234, 39%, 85%);
-    }
     span {
       border-color: #65677c;
     }
+  }
+  input {
+    color: hsl(234, 39%, 85%);
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: hsl(234, 39%, 85%) !important;
   }
   .selectTodo {
     color: hsl(234, 39%, 85%);
@@ -85,6 +92,13 @@
   }
   input {
     color: #51505e;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: #51505e !important;
   }
   .selectTodo {
     color: #51505e;

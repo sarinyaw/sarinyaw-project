@@ -33,12 +33,4 @@ input:visited {
   font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
-  transition: background-color 5000s;
-  -webkit-text-fill-color: #fff !important;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
