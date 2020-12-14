@@ -99,8 +99,8 @@ export default function Home() {
   }
   const clearTodoComplete = () => {
     const newTodos = [...todoList];
-    newTodos.map(value => value.complete = false)
-    updateTodo(newTodos)
+    const filters = newTodos.filter(value => value.complete === false)
+    updateTodo(filters)
   }
   let colorMode = isDarkMode ? `${styles.main} ${styles.dark}` : `${styles.main} ${styles.light}`
   return (
@@ -128,7 +128,7 @@ export default function Home() {
               filterStatus={filterStatus}
               todoList={filterTodoList}
               itemLeft={itemLeft}
-              selectStatus={selectStatus }
+              selectStatus={selectStatus}
               clearTodoComplete={clearTodoComplete} />
           </div>
         </div>
